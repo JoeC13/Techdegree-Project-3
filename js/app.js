@@ -167,7 +167,7 @@ $('#credit-card').next().hide();
 $('#credit-card').next().next().hide();
 $('#credit-card').show();
 
-//only shows which option is selected
+//shows which payment option is selected
 $('#payment').change(function(event){
   if ($('#payment [value="credit card"]').prop('selected') === true) {
     $('#credit-card').show();
@@ -175,7 +175,7 @@ $('#payment').change(function(event){
     $('#credit-card').hide();
   };
 });
-
+//shows which payment option is selected
 $('#payment').change(function(event){
   if ($('#payment [value="paypal"]').prop('selected') === true) {
     $('#credit-card').next().show();
@@ -183,7 +183,7 @@ $('#payment').change(function(event){
     $('#credit-card').next().hide();
   };
 });
-
+//shows which payment option is selected
 $('#payment').change(function(event){
   if ($('#payment [value="bitcoin"]').prop('selected') === true) {
     $('#credit-card').next().next().show();
@@ -193,7 +193,7 @@ $('#payment').change(function(event){
 });
 
 
-
+//Error messages from lines 197 to 283
  $('button').on('click', function(event){
    if ($('#name').val() === "") {
    event.preventDefault();
@@ -205,17 +205,17 @@ $('#payment').change(function(event){
 };
   });
 
-  $('button').on('click', function(event){
+ $('button').on('click', function(event){
     const emailInput = $('#mail').val();
     const emailRegex = /[^@]+@[^@.]+\.[a-z]+$/i;
     if (emailRegex.test(emailInput)) {
       $('#mail').css('borderColor', '#c1deeb');
       $('#mail').prev().css('color', 'black');
- } else {
+  } else {
     event.preventDefault();
     $('#mail').css('borderColor', 'red');
     $('#mail').prev().css('color', 'red');
- };
+  };
 });
 
 $('.activities legend').append('<p>Please pick an activity</p>');
@@ -244,8 +244,8 @@ $('button').on('click', function(event){
               event.preventDefault();
               ccInput.css('borderColor', 'red');
               ccInput.prev().css('color', 'red');
+              //Extra Credit: Error Message for credit card.
               $('#payment').prev().prev().html('Payment Info <br> Enter a 13 to 16 digit credit card number').css('color', 'red');//Extra Credit error message
-
             };
           };
         });
